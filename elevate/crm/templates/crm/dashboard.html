@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <title>Auction House</title>
+    {%load static %}
+    <link rel="stylesheet" href="{% static 'crm/style.css'%}" />
+  </head>
+
+  {% comment %} admin - dev password - fastestmanalive@123 {% endcomment %}
+
+  <body>
+    {% comment %}
+    <h1>This is the Dashboard!</h1>
+    {% endcomment %}
+
+    <nav>
+      <a href=""><img src="{% static "crm/images/logo.png" %}" alt=""></a>
+      <div id="navbar">
+        <button class="btn">
+          <a href="{% url  'user_logout' %}">Logout</a>
+        </button>
+      </div>
+    </nav>
+
+    <section id="box">
+      <div>
+        <ul id="containar">
+          <li><a class="active" href="{% url 'dashboard' %}">Home</a></li>
+          <li><a href="{% url 'dashboard' %}">My Products</a></li>
+          <li><a href="{% url 'dashboard' %}">Add Products</a></li>
+          <li><a href="{% url 'dashboard' %}">Auction</a></li>
+          <li><a href="{% url 'dashboard' %}">My Bids</a></li>
+          <li><a href="{% url 'dashboard' %}">Profile</a></li>
+        </ul>
+      </div>
+    </section>
+    <section id="hero">
+      <div>
+        <span>Unlock Rare Treasures:</span>
+        <span>Join Our Online Auction Experience</span>
+        <span
+          >Immerse Yourself In A World Of Bidding Excitement. Discover Unique
+          Items, Engage In Real-Time Auctions, Secure Exclusive Treasures With
+          Our Online Auction Platform.</span
+        >
+        <button>Start Bidding Now</button>
+      </div>
+
+      <div class="heroimg">
+        <img src={% static "crm/images/Group 2.svg"%} alt="">
+      </div>
+    </section>
+
+    {% comment %}
+    <footer class="section-p1">
+      <div class="col">
+        <img class="logo" src="img/logo2.png" alt="" />
+        <h4>Connect</h4>
+        <p>
+          <strong>Address : </strong>Vrundavan Society, Jesar Road, Savarkundla,
+          Amreli, Gujarat
+        </p>
+        <p><strong>Phone : </strong>9624881511</p>
+        <p><strong>Hours : </strong>10:00 - 18:00, Mon - Sat</p>
+      </div>
+      <div class="col">
+        <h4>About</h4>
+        <a href="#">About Us</a>
+        <a href="#">Delivery Information</a>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Term & Condition</a>
+        <a href="#">contact Us</a>
+      </div>
+      <div class="col">
+        <h4>My Account</h4>
+        <a href="#">Sign In</a>
+        <a href="#">View Cart</a>
+        <a href="#">My Wishlist</a>
+        <a href="#">Track My Order</a>
+        <a href="#">Help</a>
+      </div>
+      <div class="col">
+        <h4>Follow Us</h4>
+        <div class="icon">
+          <a href="#" class="fa fa-facebook"></a>
+          <a href="#" class="fa fa-twitter"></a>
+          <a href="#" class="fa fa-instagram"></a>
+          <a href="#" class="fa fa-pinterest"></a>
+        </div>
+      </div>
+    </footer>
+
+    <section id="end" class="section-p1">
+      <h4>@ 2023 Copyright, All Rights Reserved</h4>
+    </section>
+    {% endcomment %}
+  </body>
+</html>
