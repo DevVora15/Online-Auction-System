@@ -19,6 +19,12 @@ class CreateUserForm(UserCreationForm):
         model = CustomUser
         fields = ['first_name','last_name','username', 'email','password1','password2','birthday','address']
     
+    def __init__(self, *args, **kwargs):
+        super(CreateUserForm, self).__init__(*args, **kwargs)
+        self.fields['birthday'].widget.attrs['type'] = 'date'
+        self.fields['address'].widget.attrs['rows'] = 3
+        self.fields['address'].widget.attrs['placeholder'] = 'Enter your address here.'
+        self.fields['birthday'].help_text = 'Format: YYYY-MM-DD'
 # Authenticate the user
         
 class LoginForm(AuthenticationForm):
@@ -26,6 +32,7 @@ class LoginForm(AuthenticationForm):
     username = forms.CharField(widget=TextInput())
     password = forms.CharField(widget=PasswordInput())
     
+
 
 
 
