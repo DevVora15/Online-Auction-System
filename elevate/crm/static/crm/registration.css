@@ -160,10 +160,8 @@ nav img {
 #login-box .login-right .login-btn div {
   width: 150px;
   height: 50px;
-  background: #363124;
-  /* border-left: 25px solid transparent;
-    border-right: 0px solid transparent;
-    border-bottom: 50px solid #363124; */
+  border-bottom: 50px solid #363124;
+	border-left: 25px solid transparent;
 }
 
 #login-box .login-right .login-btn a {
@@ -183,10 +181,6 @@ nav img {
   color: #F09E22;
 }
 
-#login-box .login-right .login-btn .active {
-  color: #363124;
-  background-color: white;
-}
 
 #login-box .login-right .login-details {
   width: 45%;

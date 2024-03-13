@@ -41,6 +41,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'jazzmin',
     "django.contrib.admin",
     "django.contrib.auth",
     "django.contrib.contenttypes",
@@ -48,6 +49,8 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
 
+    "crispy_forms",
+    "crispy_bootstrap5",
     "crm",
 ]
 
@@ -117,7 +120,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = "en-us"
 
-TIME_ZONE = "UTC"
+TIME_ZONE = 'Asia/Kolkata'  # Change this to your desired time zone
 
 USE_I18N = True
 
@@ -128,6 +131,15 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/5.0/howto/static-files/
 
 STATIC_URL = "static/"
+
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+MEDIA_URL = '/media/'
+
+
+
+CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5"
+
+CRISPY_TEMPLATE_PACK = "bootstrap5"
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
@@ -147,3 +159,40 @@ EMAIL_HOST_PASSWORD = "pckoguahjionwval"
 EMAIL_USE_TLS = True
 
 
+JAZZMIN_SETTINGS = {
+
+    "site_title": "Auction House Admin",
+    "site_header": "Auction House",
+    "site_brand": "Auction House",
+    "site_logo": "crm/images/Group 11.png",
+    "site_logo_classes": "img-circle",
+    "site_icon": None,
+    "welcome_sign": "Welcome to the Auction House",
+    "copyright": "Auction House Ltd",
+    "topmenu_links": [
+
+        # Url that gets reversed (Permissions can be added)
+        {"name": "Home",  "url": "admin:index", "permissions": ["auth.view_user"]},
+
+        # model admin to link to (Permissions checked against model)
+        {"model": "auth.User"},
+
+        # App with dropdown menu to all its models pages (Permissions checked against models)
+        {"app": "crm"},
+    ],
+    "changeform_format": "collapsible",
+    "usermenu_links": [
+        {"name": "View site", "url": "{{dashboard}}", "new_window": True},
+        {"model": "auth.user"}
+    ],
+
+}
+# JAZZMIN_UI_TWEAKS = {
+    
+#     "theme": "darkly",
+# }
+
+
+
+KEY = 'rzp_test_HLUDc0d2oVKUYA'
+SECRET_KEY = '14pMKkWadpNJkEh5iiH8vfxW'
