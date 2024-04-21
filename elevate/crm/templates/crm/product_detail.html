@@ -4,6 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+      rel="shortcut icon"
+      type="image/png"
+      href="{% static 'crm/images/favicon.ico' %}"
+    />
     <title>Product Detail</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="{% static 'crm/style.css'%}" />
@@ -14,12 +19,19 @@
     <nav>
         <a href=""><img src="{% static "crm/images/logo.png" %}" alt=""></a>
         <div id="navbar">
-          <p style="color: white">{{user.username}}</p>
+          <p style="color: white; font-size: 24px">Hello, {{user.username}}</p>
   
           <a class="profile-pic" href="{% url  'profile' %}"
             ><img
               class="rounded-circle shadow-4"
-              style="width: 80px"
+              style="
+                width: 80px;
+                vertical-align: middle;
+                width: 50px;
+                height: 50px;
+                border-radius: 50%;
+                margin-left: 10px;
+              "
               alt="Avatar"
               src="{{ user.profile.image.url }}"
           /></a>

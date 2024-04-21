@@ -206,13 +206,16 @@ def add_product(request):
     if request.method == 'POST':
         form = ProductForm(request.user,request.POST, request.FILES)
         if form.is_valid():
+            product = form.save(commit=False)  # Don't commit to database yet
+            product.user = request.user  # Set the user field to the current user
             date = form.cleaned_data['date']
             tomorrow = timezone.now().date() + timedelta(days=1)
             if date < tomorrow:
                 form.add_error('date', _('Date must be a future date starting from tomorrow.'))
-            else:
-                form.save()
-                return redirect('add_product')  
+                return render(request, 'crm/add_product.html', {'form': form, 'categories': categories})
+            product.save()  # Now save the product with the user assigned
+            messages.success(request, 'Product added successfully!')
+            return redirect('add_product')
 
         else:
             # Form is invalid, render the form with errors

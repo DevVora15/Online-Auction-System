@@ -3,7 +3,7 @@ from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
 from django.contrib.auth.models import User
 
 from django import forms
-from .models import CustomUser,Profile,Product,ShippingDetails
+from .models import Category, CustomUser,Profile,Product,ShippingDetails
 from django.forms.widgets import PasswordInput,TextInput
 from datetime import datetime, timedelta
 from django.core.exceptions import ValidationError
@@ -86,8 +86,9 @@ class ProductForm(forms.ModelForm):
 
     def __init__(self, user, *args, **kwargs):
         super(ProductForm, self).__init__(*args, **kwargs)
-        self.fields['user'].widget = forms.HiddenInput()  # Hide the user field from the form
-        self.fields['user'].initial = user  # Set the initial value to the logged-in user
+        self.fields['Category'].queryset = Category.objects.all()  # Update queryset for category field
+        self.fields['user'].widget = forms.HiddenInput()
+        self.fields['user'].required = False  # Make user field not required
 
     def clean(self):
         cleaned_data = super().clean()

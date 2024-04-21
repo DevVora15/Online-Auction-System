@@ -1,14 +1,19 @@
+{%load static %}
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
+      rel="shortcut icon"
+      type="image/png"
+      href="{% static 'crm/images/favicon.ico' %}"
+    />
+    <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
     <title>Auction House</title>
-    {%load static %}
     <link rel="stylesheet" href="{% static 'crm/style.css'%}" />
   </head>
   <body>
@@ -65,11 +70,11 @@
           <li>Engage In Real-Time Auctions,</li>
           <li>Secure Exclusive Treasures With Our Online Auction Platform.</li>
         </ul>
-        <a class="hero-btn" href="loginuser.html">Start Bidding Now</a>
+        <a class="hero-btn" href="{% url 'registration' %}">Start Bidding Now</a>
       </div>
 
       <div class="heroimg">
-        <img src={% static "crm/images/Group 2.svg"%} alt="">
+        <img src="{% static "crm/images/Group 2.svg"%}" alt="">
       </div>
     </section>
 
@@ -136,7 +141,7 @@
                             <h6>3245 items</h6>
                         </div>
                         <div>
-                            <a class="des-btn" href="">Explore</a>
+                            <a class="des-btn" href="{% url 'registration' %}">Explore</a>
                         </div>
                     </div>
                 </div>
@@ -217,7 +222,7 @@
 
             <div class="mySlides2">
                 <div class="li-box">
-                    <img src={% static "crm/images/Rectangle 8.png"%} alt="">                    <div class="li-des">
+                    <img src="{% static "crm/images/Rectangle 8.png"%}" alt="">                    <div class="li-des">
                         <div class="li-des-box">
                             <h5>Sakhyamuni Buddha</h5>
                             <h6>Current Bid</h6>
@@ -227,7 +232,7 @@
                     </div>
                 </div>
                 <div class="li-box">
-                    <img src={% static "crm/images/Rectangle 8.png"%} alt="">                    <div class="li-des">
+                    <img src="{% static "crm/images/Rectangle 8.png"%}" alt="">                    <div class="li-des">
                         <div class="li-des-box">
                             <h5>Sakhyamuni Buddha</h5>
                             <h6>Current Bid</h6>
@@ -237,7 +242,7 @@
                     </div>
                 </div>
                 <div class="li-box">
-                    <img src={% static "crm/images/Rectangle 8.png"%} alt="">                    <div class="li-des">
+                    <img src="{% static "crm/images/Rectangle 8.png"%}" alt="">                    <div class="li-des">
                         <div class="li-des-box">
                             <h5>Sakhyamuni Buddha</h5>
                             <h6>Current Bid</h6>
@@ -250,7 +255,7 @@
             </div>
             <div class="mySlides2">
                 <div class="li-box">
-                    <img src={% static "crm/images/Rectangle 8.png"%} alt="">                    <div class="li-des">
+                    <img src="{% static "crm/images/Rectangle 8.png"%}" alt="">                    <div class="li-des">
                         <div class="li-des-box">
                             <h5>Sakhyamuni Buddha</h5>
                             <h6>Current Bid</h6>
@@ -260,7 +265,7 @@
                     </div>
                 </div>
                 <div class="li-box">
-                    <img src={% static "crm/images/Rectangle 8.png"%} alt="">                    <div class="li-des">
+                    <img src="{% static "crm/images/Rectangle 8.png"%}" alt="">                    <div class="li-des">
                         <div class="li-des-box">
                             <h5>Sakhyamuni Buddha</h5>
                             <h6>Current Bid</h6>
@@ -272,7 +277,7 @@
             </div>
             <div class="mySlides2">
                 <div class="li-box">
-                    <img src={% static "crm/images/Rectangle 8.png"%} alt="">                    <div class="li-des">
+                    <img src="{% static "crm/images/Rectangle 8.png"%}" alt="">                    <div class="li-des">
                         <div class="li-des-box">
                             <h5>Sakhyamuni Buddha</h5>
                             <h6>Current Bid</h6>
@@ -282,7 +287,7 @@
                     </div>
                 </div>
                 <div class="li-box">
-                    <img src={% static "crm/images/Rectangle 8.png"%} alt="">                    <div class="li-des">
+                    <img src="{% static "crm/images/Rectangle 8.png"%}" alt="">                    <div class="li-des">
                         <div class="li-des-box">
                             <h5>Sakhyamuni Buddha</h5>
                             <h6>Current Bid</h6>
@@ -292,7 +297,7 @@
                     </div>
                 </div>
                 <div class="li-box">
-                    <img src={% static "crm/images/Rectangle 8.png"%} alt="">                    <div class="li-des">
+                    <img src="{% static "crm/images/Rectangle 8.png"%}" alt="">                    <div class="li-des">
                         <div class="li-des-box">
                             <h5>Sakhyamuni Buddha</h5>
                             <h6>Current Bid</h6>
@@ -317,7 +322,7 @@
         </div>
         <div class="works-container">
             <div class="works-box">
-                <img src={% static "crm/images/Group 8.png"%} alt="">
+                <img src={% static "crm/images/Group 8.png"%}  alt="">
                 <span>Create Account</span>
                 <span>Create Account On Web By Email Id
                     Or Social Media</span>
@@ -352,7 +357,7 @@
 
     <footer class="section-p1">
       <div class="col">
-        <img class="logo" src={% static "crm/images/logo2.png"%} alt="">
+        <img class="logo" src="{% static "crm/images/logo2.png"%}" alt="">
         <h4>Connect</h4>
         <p>
           <strong>Address : </strong>Vrundavan Society, Jesar Road, Savarkundla,

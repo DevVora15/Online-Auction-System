@@ -1,11 +1,16 @@
+{%load static %}
 <!DOCTYPE html>
 <html lang="en">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link
+      rel="shortcut icon"
+      type="image/png"
+      href="{% static 'crm/images/favicon.ico' %}"
+    />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <title>My Bids</title>    
-        {%load static %}
         <link rel="stylesheet" href="{% static 'crm/style.css'%}" /></head>
 <body>
     <nav>
@@ -125,7 +130,7 @@
         </div>
     </section>
 
-<footer class="section-p1">
+{% comment %} <footer class="section-p1">
     <div class="col">
         <img class="logo" src={% static "crm/images/logo2.png"%} alt="">
         <h4>Connect</h4>
@@ -163,7 +168,7 @@
 
 <section id="end" class="section-p1">
     <h4>@ 2023 Copyright, All Rights Reserved</h4>
-</section>
+</section> {% endcomment %}
 
 
 

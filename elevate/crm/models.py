@@ -11,7 +11,12 @@ from django.utils import timezone
 
 
 # Create your models here.
+
+
+
 class CustomUser(AbstractUser):
+# ignore this model just a sample for testing
+# try this for upcoming projects
     birthday = models.DateField(null=True, blank=True)
     address = models.TextField(blank=True, null=True)  # Add the 'address' field
     groups = models.ManyToManyField(Group, verbose_name='groups', blank=True, related_name='customuser_groups')
